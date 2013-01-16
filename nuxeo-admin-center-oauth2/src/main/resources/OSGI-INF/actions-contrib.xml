@@ -1,0 +1,15 @@
+<component name="org.nuxeo.connect.client.actions.oauth2">
+
+  <require>org.nuxeo.connect.client.actions</require>
+
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+    point="actions">
+
+       <action id="oauth2ServiceProviders" link="/incl/oauth2/providers.xhtml"
+         label="tab.oauth2.providers" order="20">
+         <category>OAuthOpensocial_sub_tab</category>
+         <filter-id>only_for_manager</filter-id>
+       </action>
+   </extension>
+
+</component>

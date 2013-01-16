@@ -1,0 +1,10 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Name: Nuxeo WebEngine OAuth2 Connector
+Created-By: 1.6.0_20 (Sun Microsystems Inc.)
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Version: 0.0.0.SNAPSHOT
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.nuxeo.ecm.webengine.oauth2;singleton:=true
+Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=oauth2;extends=base;headless=true;package=org/nuxeo/ecm/webengine/oauth2

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.social.mini.message.actions">
+
+  <extension target="org.nuxeo.ecm.platform.actions.ActionService"
+    point="actions">
+
+    <action id="OAuthSubscriber" link="user_center_fragment.xhtml"
+      label="oauth.subscriber.tab.view" icon="/icons/minimessages.png" order="35">
+      <category>USER_CENTER</category>
+    </action>
+
+    <action id="UserOAuthSubscriber" link="/incl/oauth_subscriber.xhtml"
+      label="oauth.subscriber.tab.view" order="10">
+      <category>OAuthSubscriber_sub_tab</category>
+    </action>
+
+  </extension>
+
+</component>

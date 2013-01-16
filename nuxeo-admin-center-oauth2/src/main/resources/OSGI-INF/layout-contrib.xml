@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.admin.oauth2.layoutContrib">
+
+  <extension target="org.nuxeo.ecm.platform.forms.layout.WebLayoutManager"
+    point="layouts">
+      
+    <layout name="oauth2ServiceProviderLayoutAdmin">
+      <templates>
+        <template mode="any">
+          /directory/directoryOAuth_layout_template.xhtml
+        </template>
+      	<template mode="view_list_and_header">
+          /incl/oauth2/view_list_layout.xhtml
+        </template>
+        <template mode="view_list">
+          /incl/oauth2/view_list_layout.xhtml
+        </template>
+      </templates>
+      <rows>
+        <row>
+          <widget>serviceName</widget>
+        </row>
+        <row>
+          <widget>authorizationServerURL</widget>
+        </row>
+        <row>
+          <widget>tokenServerURL</widget>
+        </row>
+        <row>
+          <widget>description</widget>
+        </row>
+        <row>
+        	<widget>clientId</widget>
+        </row>
+        <row>
+        	<widget>clientSecret</widget>
+        </row>
+         <row>
+        	<widget>scopes</widget>
+        </row>
+        <row>
+          <widget>enabled</widget>
+        </row>
+      </rows>
+
+      <widget name="clientId" type="text">
+        <labels>
+          <label mode="any">Client Id</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.clientId</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth2.help.clientId
+          </property>
+        </properties>
+      </widget>
+      <widget name="clientSecret" type="text">
+        <labels>
+          <label mode="any">Client Secret</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.clientSecret</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth2.help.clientSecret
+          </property>
+        </properties>
+      </widget>
+	  <widget name="scopes" type="text">
+        <labels>
+          <label mode="any">Scopes</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.scopes</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth2.help.scopes
+          </property>
+        </properties>
+      </widget>
+
+      <widget name="enabled" type="checkbox">
+        <labels>
+          <label mode="any">Enabled</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.enabled</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth.help.enabled
+          </property>
+        </properties>
+      </widget>
+      <widget name="description" type="text">
+        <labels>
+          <label mode="any">Description</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.description</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth.help.description
+          </property>
+        </properties>
+      </widget>
+      <widget name="authorizationServerURL" type="text">
+        <labels>
+          <label mode="any">Authorization URL</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.authorizationServerURL</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth2.help.authorizationServerURL
+          </property>
+        </properties>
+      </widget>
+      <widget name="tokenServerURL" type="text">
+        <labels>
+          <label mode="any">Token URL</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.tokenServerURL</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth2.help.tokenServerURL
+          </property>
+        </properties>
+      </widget>
+
+      <widget name="serviceName" type="text">
+        <labels>
+          <label mode="any">Service name</label>
+        </labels>
+        <translated>true</translated>
+        <fields>
+          <field>oauth2ServiceProvider.serviceName</field>
+        </fields>
+        <properties mode="any">
+          <property name="help">
+          label.oauth.help.serviceName
+          </property>
+        </properties>
+      </widget>
+
+    </layout>
+
+   </extension>
+</component>

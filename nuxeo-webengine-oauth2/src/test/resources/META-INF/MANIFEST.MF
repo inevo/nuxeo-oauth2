@@ -1,0 +1,5 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Name: Nuxeo Webengine OAuth Tests
+Bundle-SymbolicName: org.nuxeo.ecm.webengine.oauth.tests;singleton:=true
