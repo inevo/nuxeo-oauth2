@@ -82,11 +82,13 @@
     </nxl:layoutRow>
       <c:if test="#{!isReadOnly}">
         <td class="fieldColumn">
-          <h:commandButton value="#{messages['command.authorize']}"
+        <h:outputLink
             id="#{layout.id}_authorizeButton"
             styleClass="button"
-            action="#{bean.authorize(value.id)}"
-            immediate="true" />
+            value="#{bean.getAuthorizationURL(value.id)}"
+            target="_blank" >
+            <h:outputText value="#{messages['command.authorize']}" />
+            </h:outputLink>
         </td>
         <td class="fieldColumn">
           <h:commandButton value="#{messages['command.edit']}"

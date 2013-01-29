@@ -10,6 +10,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.nuxeo.ecm.core.api.DocumentModel;
 import org.nuxeo.ecm.core.api.DocumentModelList;
+import org.nuxeo.ecm.directory.BaseSession;
 import org.nuxeo.ecm.directory.Session;
 import org.nuxeo.ecm.directory.api.DirectoryService;
 import org.nuxeo.runtime.api.Framework;
@@ -42,7 +43,9 @@ public class OAuth2ServiceProviderRegistryImpl extends DefaultComponent
 
 	        try {
 	            session = ds.open(DIRECTORY_NAME);
-	            DocumentModel entry = session.createEntry(new HashMap<String, Object>());
+	            DocumentModel creationEntry = BaseSession.createEntryModel(null, NuxeoOAuth2ServiceProvider.SCHEMA,
+	                    null, null);
+	            DocumentModel entry = session.createEntry(creationEntry);
 	            provider.asDocumentModel(entry);
 	            session.updateEntry(entry);
 	           

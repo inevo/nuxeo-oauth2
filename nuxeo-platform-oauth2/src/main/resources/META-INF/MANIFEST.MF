@@ -4,9 +4,9 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-Version: 5.6
 Bundle-Name: nuxeo-platform-oauth2
+Bundle-ManifestVersion: 2
 Nuxeo-Component: OSGI-INF/oauth2serviceprovider-framework.xml,OSGI-INF
  /schema-contrib.xml,OSGI-INF/directory-contrib.xml
-Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.nuxeo.ecm.platform.oauth2;singleton:=true
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 
